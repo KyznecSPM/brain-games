@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
@@ -32,6 +34,6 @@
     "brain-games": "dist/bin/brain-games.js"
   },
   "files": [
-  "dist"
+    "dist"
   ]
 }
