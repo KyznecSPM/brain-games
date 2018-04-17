@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import parityCheck from '..';
+import GameBrainEven from '..';
 
-parityCheck();
+console.log('Answer "yes" if number even otherwise answer "no".');
+GameBrainEven();
