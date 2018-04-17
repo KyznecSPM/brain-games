@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 // функция приветствия, из которой получаем имя игрока
-const greetingUser = () => {
+export const greetingUser = () => {
   const getName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${getName}`);
   return getName;
 };
 
-const GameBrainEven = () => {
+export const GameBrainEven = () => {
   console.log('GameBrainEven');
   const number = Math.floor(Math.random() * 100) + 1;
   console.log(`Question: ${number}`);
@@ -19,5 +19,3 @@ const GameBrainEven = () => {
   console.log(`'${getAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   return false;
 };
-
-export { greetingUser, GameBrainEven };
