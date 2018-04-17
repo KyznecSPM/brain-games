@@ -35,7 +35,8 @@
   },
   "homepage": "https://github.com/KyznecSPM/project-lvl1-s260#readme",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
