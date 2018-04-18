@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-import runGameBrainEven from '..';
 import welcome from './brain-games';
+import runGame from '../games/game-even';
 
 welcome();
-runGameBrainEven(0);
+console.log('Answer "yes" if number even otherwise answer "no".');
+runGame();
