@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-import { GameBrainEven } from '..';
+import runGameBrainEven from '..';
 
-console.log('Answer "yes" if number even otherwise answer "no".');
-GameBrainEven();
+const brainEven = () => {
+  runGameBrainEven(0);
+};
+
+export default brainEven;
