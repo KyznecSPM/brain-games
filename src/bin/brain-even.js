@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 import runGameBrainEven from '..';
+import welcome from './brain-games';
 
-const brainEven = () => {
-  runGameBrainEven(0);
-};
-
-export default brainEven;
+welcome();
+runGameBrainEven(0);
