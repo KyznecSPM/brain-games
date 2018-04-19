@@ -1,15 +1,14 @@
 import { gameData, startGame } from '..';
+import generateNumber from '../lib/generateNumber';
 
-const randomNumber = () => Math.floor(Math.random() * 100);
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
-const exportDescription = 'Answer "yes" if number even otherwise answer "no".';
-
-const exportQuestionAnswer = () => {
-  const question = randomNumber();
+const questionAnswer = () => {
+  const question = generateNumber(1, 100);
   const answer = question % 2 === 0 ? 'yes' : 'no';
   return gameData(question, answer);
 };
 
-const runGame = () => startGame(exportDescription, exportQuestionAnswer);
+const runGame = () => startGame(description, questionAnswer);
 
 export default runGame;

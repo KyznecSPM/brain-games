@@ -1,24 +1,23 @@
 import { gameData, startGame } from '..';
+import generateNumber from '../lib/generateNumber';
 
-const randomNumber = () => Math.floor(Math.random() * (10 - 1)) + 1;
+const description = 'Find the greatest common divisor of given numbers.';
 
-const exportDescription = 'Find the greatest common divisor of given numbers.';
-
-const divisor = (x, y) => {
+const greatestCommonDivisor = (x, y) => {
   if (y === 0) {
     return Math.abs(x);
   }
-  return divisor(y, x % y);
+  return greatestCommonDivisor(y, x % y);
 };
 
-const exportQuestionAnswer = () => {
-  const firstNumber = randomNumber();
-  const secondNumber = randomNumber();
+const questionAnswer = () => {
+  const firstNumber = generateNumber(1, 10);
+  const secondNumber = generateNumber(1, 10);
   const question = `${firstNumber} ${secondNumber}`;
-  const answer = divisor(firstNumber, secondNumber);
+  const answer = greatestCommonDivisor(firstNumber, secondNumber);
   return gameData(question, String(answer));
 };
 
-const runGame = () => startGame(exportDescription, exportQuestionAnswer);
+const runGame = () => startGame(description, questionAnswer);
 
 export default runGame;

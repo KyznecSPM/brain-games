@@ -1,15 +1,12 @@
 import { gameData, startGame } from '..';
+import generateNumber from '../lib/generateNumber';
 
-const exportDescription = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
-const numSwitcher = () => Math.floor(Math.random() * (3 - 1)) + 1;
-
-const randomNumber = () => Math.floor(Math.random() * 10);
-
-const exportQuestionAnswer = () => {
-  const firstNumber = randomNumber();
-  const secondNumber = randomNumber();
-  const operation = numSwitcher();
+const questionAnswer = () => {
+  const firstNumber = generateNumber(1, 10);
+  const secondNumber = generateNumber(1, 10);
+  const operation = generateNumber(1, 3);
   if (operation === 3) {
     const question = `${firstNumber} + ${secondNumber}`;
     const answer = firstNumber + secondNumber;
@@ -24,6 +21,6 @@ const exportQuestionAnswer = () => {
   return gameData(question, String(answer));
 };
 
-const runGame = () => startGame(exportDescription, exportQuestionAnswer);
+const runGame = () => startGame(description, questionAnswer);
 
 export default runGame;
