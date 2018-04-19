@@ -1,9 +1,4 @@
 #!/usr/bin/env node
+import { startGame } from '..';
 
-const welcome = () => {
-  console.log();
-  console.log('Welcome to the Brain Games!');
-  console.log();
-};
-
-export default welcome;
+startGame(false, false);

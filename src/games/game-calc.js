@@ -1,16 +1,20 @@
 import { gameData, startGame } from '..';
 
+const exportDescription = 'What is the result of the expression?';
+
+const numSwitcher = () => Math.floor(Math.random() * (3 - 1)) + 1;
+
 const randomNumber = () => Math.floor(Math.random() * 10);
 
-const exportGameData = () => {
+const exportQuestionAnswer = () => {
   const firstNumber = randomNumber();
   const secondNumber = randomNumber();
-  const operation = randomNumber();
-  if (operation <= 3) {
+  const operation = numSwitcher();
+  if (operation === 3) {
     const question = `${firstNumber} + ${secondNumber}`;
     const answer = firstNumber + secondNumber;
     return gameData(question, String(answer));
-  } else if (operation > 3 && operation < 7) {
+  } else if (operation === 2) {
     const question = `${firstNumber} - ${secondNumber}`;
     const answer = firstNumber - secondNumber;
     return gameData(question, String(answer));
@@ -20,6 +24,6 @@ const exportGameData = () => {
   return gameData(question, String(answer));
 };
 
-const runGame = () => startGame(exportGameData);
+const runGame = () => startGame(exportDescription, exportQuestionAnswer);
 
 export default runGame;
