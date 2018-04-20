@@ -5,14 +5,14 @@ const description = 'Is this number prime?';
 
 const isPrime = (number) => {
   if (number < 2) {
-    return 'no';
+    return false;
   }
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const questionAnswer = () => {

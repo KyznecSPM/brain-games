@@ -1,4 +1,4 @@
-// складываем все входящие в число цифры
+
 const sum = (num) => {
   let result = 0;
   const stringNum = String(num);
