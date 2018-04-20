@@ -8,7 +8,6 @@ const questionAnswer = () => {
   const number = generateNumber(100, 1000);
   const question = `${number}`;
   const answer = balanceNumber(number);
-  console.log(`cheating ${answer}`);
   return gameData(question, String(answer));
 };
 
