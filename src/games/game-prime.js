@@ -18,8 +18,8 @@ const isPrime = (number) => {
 const questionAnswer = () => {
   const question = generateNumber(10, 100);
   const answer = isPrime(question);
-  console.log(answer);
-  return gameData(question, String(answer));
+  console.log(answer ? 'yes' : 'no');
+  return gameData(question, answer ? 'yes' : 'no');
 };
 
 const runGame = () => startGame(description, questionAnswer);
